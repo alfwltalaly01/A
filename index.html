@@ -723,79 +723,8 @@
       window.open(`https://wa.me/966599178496?text=${encodeURIComponent(message)}`, '_blank');
     });
   }
-  // تفعيل عمل سلة الإشعارات
-  // تفعيل عمل سلة الإشعارات
-const notiBell = document.getElementById("notiBell");
- const notiBell = document.getElementById("notiBell");
- const notiContent = document.getElementById("notiContent");
- const bellBadge = document.querySelector(".bell-badge");
-const bellBadge = document.querySelector(".bell-badge");
 
-if (notiBell && notiContent) {
-    // 1. عند الضغط على زر الجرس
-    notiBell.addEventListener("click", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
 
-        // تبديل كلاس show لتفعيل الأنيميشن والتنسيق
-        notiContent.classList.toggle("show");
-
-        // إخفاء الدائرة الحمراء (الشارة)
-        if (bellBadge) {
-            bellBadge.style.display = "none";
-        }
-    });
-
-    // 2. إغلاق القائمة تلقائياً إذا ضغط المستخدم في أي مكان بالخارج
-    document.addEventListener("click", function(e) {
-        if (!notiBell.contains(e.target) && !notiContent.contains(e.target)) {
-            notiContent.classList.remove("show");
-        }
-    });
-}
-
-  // 2. إغلاق القائمة تلقائياً إذا ضغط المستخدم في أي مكان خارجها
-  document.addEventListener("click", function(e) {
-    if (!notiBell.contains(e.target) && !notiContent.contains(e.target)) {
-      notiContent.style.display = "none";
-    }
-  });
-}
-// 1. عند الضغط على زر الجرس
-notiBell.addEventListener("click", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    // تبديل كلاس show المكتوب في الـ CSS لإظهار وإخفاء القائمة مع الأنيميشن
-    notiContent.classList.toggle("show");
-
-    // 2. إخفاء الدائرة الحمراء (الشارة)
-    if (bellBadge) {
-        bellBadge.style.display = "none";
-    }
-});
-
-// 3. إغلاق القائمة تلقائياً إذا ضغط المستخدم في أي مكان بالخارج
-document.addEventListener("click", function(e) {
-    if (!notiBell.contains(e.target) && !notiContent.contains(e.target)) {
-        notiContent.classList.remove("show"); // حذف كلاس show لإغلاقها
-    }
-});
-    });
-}
-</script>
- <script>
-  const bell = document.getElementById('notiBell');
-  const dropdown = document.getElementById('notiContent');
-
-  bell.addEventListener('click', function(e) {
-    e.stopPropagation();
-    dropdown.classList.toggle('show');
-  });
-
-  document.addEventListener('click', function() {
-    dropdown.classList.remove('show');
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
