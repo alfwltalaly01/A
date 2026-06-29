@@ -14,47 +14,40 @@
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
 <div class="nav-inner" style="display: flex !important; justify-content: space-between !important; align-items: center !important;">
-
-
-<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-
-    <!-- جهة اليمين: القائمة والشعار -->
+  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 10px;">
+    <div class="notification-container" style="position: relative; z-index: 99999; pointer-events: auto;">
+      <button class="bell-icon-btn" id="notiBell" aria-label="الإشعارات" style="position: relative; z-index: 100000; pointer-events: auto !important;">
+        🔔
+        <span class="bell-badge">3</span>
+      </button>
+      <div class="bell-dropdown" id="notiContent">
+        <div class="bell-dropdown-header">
+          <span>🔔 التنبيهات الأخيرة</span>
+        </div>
+        <div class="bell-dropdown-body">
+          <div class="bell-item unread">
+            <strong>⚡ عرض الفولت العالي:</strong> خصم 15% على خدمات الفحص الشامل للكهرباء والسباكة بمناسبة الصيف!
+          </div>
+          <div class="bell-item">
+            <strong>📅 حجز سريع:</strong> تم تفعيل الحجز المباشر للمواعيد وتأكيده عبر الواتساب فوراً.
+          </div>
+          <div class="bell-item">
+            <strong>💡 نصيحة السلامة:</strong> افحص لوحة القواطع الكهربائية دورياً لتجنب الأحمال الزائدة.
+          </div>
+        </div>
+      </div>
+    </div>
     <div style="display: flex; align-items: center;">
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-        <div class="logo" style="margin-right: 16px;">
-            <div class="logo-text-wrapper">
-                <span class="logo-main">الفولت العالي</span>
-                <span class="logo-sub">كهرباء . سباكة . صيانة منزلية</span>
-            </div>
+      <div class="logo" style="margin-left: 16px;">
+        <div class="logo-text-wrapper">
+          <span class="logo-main">الفولت العالي</span>
+          <span class="logo-sub">كهرباء . سباكة . صيانة منزلية</span>
         </div>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
-
-    <!-- جهة اليسار: زر الإشعارات -->
-  <div class="notification-container" style="position: relative; z-index: 99999; pointer-events: auto;">
-  <button class="bell-icon-btn" id="notiBell" aria-label="الإشعارات" style="position: relative; z-index: 100000; pointer-events: auto !important;">    
-            🔔
-            <span class="bell-badge">3</span>
-        </button>
-        
-<div class="bell-dropdown" id="notiContent" style="position: absolute; left: 0; top: 40px; background: white; border: 1px solid #ddd; width: 300px; z-index: 9999;">
-            <div class="bell-dropdown-header" style="padding: 10px; background: #f9f9f9; border-bottom: 1px solid #ddd;">
-                <span>🔔 التنبيهات الأخيرة</span>
-            </div>
-            <div class="bell-dropdown-body" style="padding: 10px;">
-                <div class="bell-item unread" style="margin-bottom: 10px;">
-                    <strong>⚡ عرض الفولت العالي:</strong> خصم 15% على خدمات الفحص الشامل للكهرباء والسباكة بمناسبة الصيف!
-                </div>
-                <div class="bell-item" style="margin-bottom: 10px;">
-                    <strong>📅 حجز سريع:</strong> تم تفعيل الحجز المباشر للمواعيد وتأكيده عبر الواتساب فوراً.
-                </div>
-                <div class="bell-item">
-                    <strong>💡 نصيحة السلامة:</strong> افحص لوحة القواطع الكهربائية دورياً لتجنب الأحمال الزائدة.
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
-
 </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">الرئيسية</a></li>
