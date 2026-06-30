@@ -650,7 +650,7 @@ z-index: 999999;
 .ticker-badge{background:linear-gradient(135deg,#c9a227,#f0d060,#c9a227);color:#0d0a06;font-weight:900;font-size:12px;padding:10px 20px 10px 16px;white-space:nowrap;display:flex;align-items:center;gap:5px;flex-shrink:0;clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}
 .ticker-badge .bell{display:inline-block;animation:bellShake 3s ease-in-out infinite}
 @keyframes bellShake{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-15deg)}80%{transform:rotate(15deg)}85%{transform:rotate(-10deg)}90%{transform:rotate(10deg)}}
-.ticker-track{flex:1;overflow:hidden;position:relative}
+.ticker-track{flex:1;overflow:hidden;position:relative;min-width:0}
 .ticker-track::before{content:'';position:absolute;right:0;top:0;bottom:0;width:50px;background:linear-gradient(to left,#0d0a06,transparent);z-index:3;pointer-events:none}
 .ticker-inner{display:flex;align-items:center;white-space:nowrap;animation:tickerScroll 10s linear infinite}
 .ticker-inner:hover{animation-play-state:paused}
