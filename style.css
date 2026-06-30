@@ -644,3 +644,18 @@ z-index: 999999;
     max-width: 90%;
   }
 }
+.ticker-section{background:#0d0a06;padding:14px 0;border-top:2px solid #c9a227;border-bottom:2px solid #c9a227;overflow:hidden;position:relative;box-shadow:0 -3px 15px rgba(201,162,39,0.2),0 3px 15px rgba(201,162,39,0.2)}
+.ticker-seo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.ticker-wrap{display:flex;align-items:center}
+.ticker-badge{background:linear-gradient(135deg,#c9a227,#f0d060,#c9a227);color:#0d0a06;font-weight:900;font-size:12px;padding:10px 20px 10px 16px;white-space:nowrap;display:flex;align-items:center;gap:5px;flex-shrink:0;clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}
+.ticker-badge .bell{display:inline-block;animation:bellShake 3s ease-in-out infinite}
+@keyframes bellShake{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-15deg)}80%{transform:rotate(15deg)}85%{transform:rotate(-10deg)}90%{transform:rotate(10deg)}}
+.ticker-track{flex:1;overflow:hidden;position:relative}
+.ticker-track::before{content:'';position:absolute;right:0;top:0;bottom:0;width:50px;background:linear-gradient(to left,#0d0a06,transparent);z-index:3;pointer-events:none}
+.ticker-inner{display:flex;align-items:center;white-space:nowrap;animation:tickerScroll 20s linear infinite}
+.ticker-inner:hover{animation-play-state:paused}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:7px;margin-left:50px;color:#f5e8c0;font-size:13.5px;font-weight:500}
+.ticker-item strong{color:#f0d060;font-weight:700}
+.ticker-sep{display:inline-block;margin-left:50px;color:#c9a227;font-size:16px;opacity:0.5}
+@media(max-width:480px){.ticker-badge{font-size:11px;padding:10px 14px 10px 10px}.ticker-item{font-size:12px;margin-left:35px}.ticker-sep{margin-left:35px}}
