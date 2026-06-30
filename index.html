@@ -763,6 +763,7 @@
     html += `<span class="ticker-item">${item.innerHTML}</span><span class="ticker-sep">◆</span>`;
   });
   ticker.innerHTML = html + html; // تكرار للحلقة السلسة
+ticker.style.animationDuration = (bellItems.length * 4) + 's';
   ticker.addEventListener('touchstart', () => ticker.style.animationPlayState = 'paused');
   ticker.addEventListener('touchend', () => ticker.style.animationPlayState = 'running');
 </script>      
